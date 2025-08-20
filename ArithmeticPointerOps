@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int firstValue = 1000;
+    int secondValue = 140;
+    
+    int* firstPtr = &firstValue;
+    int* secondPtr = &secondValue;
+    
+    int sum = *firstPtr + *secondPtr;
+    int difference = *firstPtr - *secondPtr;
+    int product = *firstPtr * *secondPtr;
+    double quotient = static_cast<double>(*firstPtr) / *secondPtr;
+    
+    cout << fixed << setprecision(2);
+    cout << "First number: " << *firstPtr << endl;
+    cout << "Second number: " << *secondPtr << endl;
+    cout << "--------------------" << endl;
+    cout << "Sum: " << sum << endl;
+    cout << "Difference: " << difference << endl;
+    cout << "Product: " << product << endl;
+    cout << "Quotient: " << quotient << endl;
+    
+    return 0;
+}
